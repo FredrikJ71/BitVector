@@ -8,6 +8,10 @@ class BinVector {
 
 public:
 
+//Default constructor, defines Binary Vector
+BinVector();
+
+
 
 private:
 std::vector<unsigned long long> mBinVector; //the storage of the bits
