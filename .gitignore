@@ -1,0 +1,8 @@
+# untracked files
+# all binary and object files
+BitVector
+BitVector.o
+BitVector.exe
+testBitVector
+testBitVector.exe
+

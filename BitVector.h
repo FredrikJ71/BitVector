@@ -1,8 +1,9 @@
 #ifndef BIT_VECTOR
 #define BIT_VECTOR
-namespace fj71cpp {
+
 #include<vector>
 
+namespace fj71cpp {
 //A class for binary vectors. 
 class BitVector {
 
@@ -11,7 +12,8 @@ public:
 //Default constructor, defines Binary Vector with 1 bit, with value 0
 BitVector();
 
-
+//Create a BitVector that can store n bits
+BitVector(int n);
 
 private:
 std::vector<unsigned long long> mBitVector; //the storage of the bits
@@ -22,6 +24,6 @@ unsigned long long mMask; //the last mLastWord bits are 1 rest is 0
 
 }; //class
 
-
 } //namespace
+
 #endif //BIT_VECTOR
