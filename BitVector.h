@@ -21,6 +21,12 @@ BitVector(int n);
 //if k is not in the range, throws out_of_range exception
 int get(int k);
 
+//set the value at position k to val 
+//note! all non-zero values of val are interpreted as 1
+//if k is not in the range, throws out_of_range exception
+void set(int k, int val);
+
+
 private:
 static const int mBitInWord = 64; //64-bit words are used to store bits
 std::vector<uint64_t> mBitVector; //the storage of the bits

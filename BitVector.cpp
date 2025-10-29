@@ -37,6 +37,26 @@ int BitVector::get(int k){
     return 1;
 }
 
+//set the value at position k to val 
+//note! all non-zero values of val are interpreted as 1
+//if k is not in the range, throws out_of_range exception
+void BitVector::set(int k, int val){
+    if(k<0 || k>= mLength ) {
+        throw std::out_of_range("k not in range of BitVector");
+    }
+    int word = k/mBitInWord;
+    int pos = k % mBitInWord;
+    uint64_t mask = 1ULL << pos;
+    if(val == 0){
+        // set bit to 0
+        mBitVector[word]&=~mask;
+    }
+    else {
+        //set bit to 1
+        mBitVector[word]|= mask;
+
+    }
+}
 
 //when length is set use this method to update other size dependent variables
 void BitVector::updateLengthParam(){
